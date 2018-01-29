@@ -10,21 +10,23 @@ Dans ce README nous allons voir les principes de base pour ruby on RAILS.
 * [Le concept de migration](#migrations)
 * [Les relations entre les models des BDD](#relations_bdd)
 * [Les fonctions du CRUD](#crud)
-
+</br>
+</br>
 
 ## <a name="stat_dyn">Sites Statiques / Sites Dynamiques</a>
 
 Un site statique, est composé de pages dites statiques, visibles telles qu’elles ont été conçues. Cela ne signifie pas qu’elles sont sans mouvement ou sans animation. La ou les pages accessibles ne seront donc pas différentes en fonction de l'utilisateur qui les consultes ou différentes pour un même utilisateur en fonction d'une visite à l'autre.
 
 Au contraire, dans un site dynamique les informations seront présentées de façon différente selon l’interaction avec le visiteur. En effet si les informations affichées seront différentes d'un utilisateur à l'autre. En fonction de la personne qui est connectée, les serveurs vont faire tourner le code et renvoyer des pages HTML/CSS différentes. Ce sont donc des sites sur lesquels il faut se connecter avec un identifiant personnel. Ce sont des sites qui ont des bases de donnée utilisateur (c'est là qu Rails va être intéressant).
-
+</br>
+</br>
 
 
 
 
 ## <a name="mvc">MVC (Model View Controller)</a>
 
-![Image Archi](/image/schema_MVC.png)
+![Image Archi](/image/schema_MVC.png) </br>
 Le Router vérifie une première fois quelle est la route et si elle est bonne.
 
 Le MVC est un système de communication entre la "View", le "Controller" et le "Model".
