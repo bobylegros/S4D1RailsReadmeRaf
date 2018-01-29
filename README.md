@@ -24,7 +24,7 @@ Au contraire, dans un site dynamique les informations seront présentées de fa�
 
 ## <a name="mvc">MVC (Model View Controller)</a>
 
-
+![Image Archi](/image/schema_MVC.png)
 Le Router vérifie une première fois quelle est la route et si elle est bonne.
 
 Le MVC est un système de communication entre la "View", le "Controller" et le "Model".
@@ -101,7 +101,7 @@ Notre objectif est pas de créer ces actions, mais plutôt de nous baser sur que
 
 
 
-## <a name="migrations>Les Migration</a>
+## <a name="migrations">Les Migrations</a>
 
 Une migration va permettre de définir les mutations, les modification à faire au niveau de la base de données.
 Ce qui est intéressant c'est qu'en travaillant à plusieurs, ça permet de n'avoir à récupérer que les migration pour que le projet se mette à jour, plutôt que d'avoir à modifier la base de donnée directement dans le "dur".
