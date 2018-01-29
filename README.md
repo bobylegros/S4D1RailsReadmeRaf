@@ -141,4 +141,4 @@ Par ressource, on entendra dans notre cas par exemple la base de données qui es
 </br>
 </br>
 
-**Et voili voilou pour ce petit résumé!***
+**Et voili voilou pour ce petit résumé!**
