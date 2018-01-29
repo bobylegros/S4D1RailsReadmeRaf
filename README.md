@@ -108,13 +108,13 @@ Encore une fois si on travaille à plusieurs et qu'un autre développeur effectu
 </br>
 
 
-## <a name:"relations_models_bdd">Les relations entre Models et BDD</a>
+## <a name="relations_models_bdd">Les relations entre Models et BDD</a>
 
 </br>
 </br>
 
 
-## <a name:"crud">Les fonctions du CRUD</a>
+## <a name="crud">Les fonctions du CRUD</a>
 
 Aujourd’hui, il y a différentes actions possibles, mais les 4 les plus utilisées sont les suivantes :
 * **GET** : qui fait comme un "return" de la ressource suivant le path demandé. elle va la chercher et en fait ce que tu lui demandes de faire
