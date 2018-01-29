@@ -86,7 +86,7 @@ En deuxième colonne on a son nom, puis on pourrait avoir une colonne chaud/froi
 
 ## <a name="get_post">GET/POST</a>
 
-**GET** et **POST** sont deux méthodes de requête-réponse entre le client et le server dans le protocole *HTTP*.
+**GET** et **POST** sont deux fonctions de requête-réponse entre le client et le server dans le protocole *HTTP*.
 
 **GET**: permet de lire des données contenu dans la base de données.
 **POST**: permet permet d'y écrire des donnée à la demande de l'utilisateur.
@@ -100,6 +100,7 @@ En deuxième colonne on a son nom, puis on pourrait avoir une colonne chaud/froi
 
 Une migration va permettre de définir les mutations, les modification à faire au niveau de la base de données.
 Ce qui est intéressant c'est qu'en travaillant à plusieurs, ça permet de n'avoir à récupérer que les migration pour que le projet se mette à jour, plutôt que d'avoir à modifier la base de donnée directement dans le "dur".
+Les migrations permettent d'apporter des modifications structurées dans la base de données sans avoir à toucher à SQL.
 
 Elles doivent être placées dans le dossier DB.
 Lorsque l'on les cré, dans leur nom il y a l'heure à laquelle on effectué cette migration.
@@ -110,18 +111,28 @@ Encore une fois si on travaille à plusieurs et qu'un autre développeur effectu
 
 ## <a name="relations_models_bdd">Les relations entre Models et BDD</a>
 
+Un model a pour but, comme nous l'avons vu, de communiquer avec la **BDD**(Base De Données), il est nécessaire de structurer les **Models** pour bien définir les interactions avec la BDD.
+
+Il est possible créer une relation, un lien entre deux tables de **BDD**, qui associe leurs données entre elles.
+Des informations de type différents d'un même utilisateur peuvent par exemple être contenues dans 2 tables différents d'une même **BDD**.
+Ou encore il est possible d'en lier un à plusieurs autres.
+Ou plusieurs ensemble.
+
+
+Les **Models** sont des classes de Ruby. Mais encore faut-il les associer. 
 </br>
 </br>
 
 
 ## <a name="crud">Les fonctions du CRUD</a>
 
-Aujourd’hui, il y a différentes actions possibles, mais les 4 les plus utilisées sont les suivantes :
+**CRUD**: Create, Read, Update, Delete
+Pour ces 4 actions principales, ont a créé 4 fonctions "principales" qui vont couvrir l'ensemble des besoins du **CRUD**.
+
+Aujourd’hui, il y a différentes actions possibles, mais les 4 fonctions les plus utilisées sont les suivantes :
 * **GET** : qui fait comme un "return" de la ressource suivant le path demandé. elle va la chercher et en fait ce que tu lui demandes de faire
 * **POST** : crée une nouvelle ressource
 * **PUT** : met à jour une ressource existante
 * **DELETE** : supprimer une ressource existante
 
-Par ressource, on entendra dans notre cas par exemple la base de données qui est derrière le "Model".
-
-Notre objectif est pas de créer ces actions, mais plutôt de nous baser sur quelques actions qui sont déjà définis. GET, POST, PUT, DELETE, répondent aux principes de **CRUD** (Create, Read, Update, Delete) que l’on veut appliquer avec Rails
+Par ressource, on entendra dans notre cas par exemple la base de données qui est derrière le "*Model*".
