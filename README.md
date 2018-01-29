@@ -1,7 +1,10 @@
 # NOTES BASES RAILS
 Dans ce README nous allons voir les principes de base pour ruby on RAILS.
+</br>
+</br>
 
 ## Sommaire
+</br>
 * [Sites Statiques / Sites Dynamiques](#stat_dyn)
 * [MVC](#mvc)
 * [Les routes](#routes)
@@ -39,6 +42,8 @@ Le Controller gères (contrôle) les données et les transmet entre la View et l
 Il vérifie que la commande envoyé par l'utilisateur est valide (notamment la route).
 
 Le Model, reçoit les requête du Controller et va chercher la correspondance dans la base de donnée et la renvoie au Controller.
+</br>
+</br>
 
 
 ### Analogie restaurant
@@ -47,9 +52,8 @@ Pour faire une analogie avec un restaurant, le "Routeur" est le serveur, il vér
 Le "Controller" est le cuisinier que reçoit la commande, il revérifie que la recette est bien dans le menu.
 Si c'est le cas, il va chercher dans son livre qui est en réalité le "Model" la recette correspondant au plat B18 dans le menu et la récupère.
 Enfin il exécute le plat qui correspond au "View", pour le renvoyer vers le client.
-
-
-
+</br>
+</br>
 
 
 ## <a name="routes">Les Routes</a>
@@ -58,16 +62,16 @@ Les routes c'est exactement comme son nom l'indique, le chemin qui mène jusqu'�
 C'est dans un URL, le fait qu'on va lui demander, dans le site de Facebook, c'est ce qui va dire que l'on va dans la rubrique de "Groupe", puis le nom du groupe...
 
 Dans une application, ce serait demander d'ouvrir le dossier compte de tel utilisateur pour aller chercher dans ses dossier l'album "Summer" dans lequel il choisira d'afficher la photo 53.
-
-
-
-
+</br>
+</br>
 
 
 ## <a name="bases_de_données">Les Bases de Données</a>
 
 C'est comme un énorme tableau "Excel" dans lequel il y a des plusieurs tables.
 La première colonne est "l'id" qui va permettre par exemple d'identifier un utilisateur, ou dans l'exemple de Félix, un article. La deuxième est généralement le nom ou le titre et les colonnes qui suivent les données qu'ils contiennent.
+</br>
+</br>
 
 
 ### Analogie Restaurant
@@ -75,11 +79,8 @@ La première colonne est "l'id" qui va permettre par exemple d'identifier un uti
 Pour reprendre notre analogie sur le restaurant, la base de donnée c'est le livre de recette.
 On a tout d'abord le numéro de la recette qui correspond à celui qui est reporté sur le menu.
 En deuxième colonne on a son nom, puis on pourrait avoir une colonne chaud/froid, une colonne ustensiles à utiliser, temps de préparation et un ingrédients.
-
-
-
-
-
+</br>
+</br>
 
 
 ## <a name="get_post">GET/POST</a>
@@ -96,11 +97,8 @@ Aujourd’hui, il y a différentes actions possibles, mais les 4 les plus utilis
 Par ressource, on entendra dans notre cas par exemple la base de données qui est derrière le "Model".
 
 Notre objectif est pas de créer ces actions, mais plutôt de nous baser sur quelques actions qui sont déjà définis. GET, POST, PUT, DELETE, répondent aux principes de CRUD (Create, Read, Update, Delete) que l’on veut appliquer avec Rails
-
-
-
-
-
+</br>
+</br>
 
 
 ## <a name="migrations">Les Migrations</a>
@@ -111,3 +109,5 @@ Ce qui est intéressant c'est qu'en travaillant à plusieurs, ça permet de n'av
 Elles doivent être placées dans le dossier DB.
 Lorsque l'on les cré, dans leur nom il y a l'heure à laquelle on effectué cette migration.
 Encore une fois si on travaille à plusieurs et qu'un autre développeur effectue une migration, on saura alors dans quel ordre il faut les exécuter.
+</br>
+</br>
