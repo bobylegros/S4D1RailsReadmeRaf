@@ -12,9 +12,8 @@ Dans ce README nous allons voir les principes de base pour ruby on RAILS.
 * [Les Bases de Données](#bases_de_données)
 * [GET / POST](#get_post)
 * [Le concept de migration](#migrations)
-* [Les relations entre les models des BDD](#relations_bdd)
+* [Les relations entre les models des BDD](#relations_models_bdd)
 * [Les fonctions du CRUD](#crud)
-</br>
 </br>
 
 ## <a name="stat_dyn">Sites Statiques / Sites Dynamiques</a>
@@ -31,28 +30,29 @@ Au contraire, dans un site dynamique les informations seront présentées de fa�
 ## <a name="mvc">MVC (Model View Controller)</a>
 
 ![Image Archi](/image/schema_MVC.png) </br>
+</br>
 Le Router vérifie une première fois quelle est la route et si elle est bonne.
 
-Le MVC est un système de communication entre la "View", le "Controller" et le "Model".
+Le **MVC** est un système de communication entre la "**View**", le "**Controller**" et le "**Model**".
 
 Le Router vérifie une première fois quelle est la route et si elle est bonne.
 
-La View est l'interface Homme/Machine, en l'occurrence ici, la page Web, donc le code HTML, CSS... Mais c'est également l'interface graphique d'une application ou d'un jeu.
+La **View** est l'interface Homme/Machine, en l'occurrence ici, la page Web, donc le code HTML, CSS... Mais c'est également l'interface graphique d'une application ou d'un jeu.
 
-Le Controller gères (contrôle) les données et les transmet entre la View et le Model lorsque l'utilisateur effectue une action. Il est aussi là pour informer l'utilisateur qu'un fichier ou une page a bien été chargé et qu'il peut faire une nouvelle action, comme cliquer sur un bouton ou autre.
+Le **Controller** gères (contrôle) les données et les transmet entre la *View* et le *Model* lorsque l'utilisateur effectue une action. Il est aussi là pour informer l'utilisateur qu'un fichier ou une page a bien été chargé et qu'il peut faire une nouvelle action, comme cliquer sur un bouton ou autre.
 Il vérifie que la commande envoyé par l'utilisateur est valide (notamment la route).
 
-Le Model, reçoit les requête du Controller et va chercher la correspondance dans la base de donnée et la renvoie au Controller.
+Le **Model**, reçoit les requête du *Controller* et va chercher la correspondance dans la base de donnée et la renvoie au *Controller*.
 </br>
 </br>
 
 
 ### Analogie restaurant
 
-Pour faire une analogie avec un restaurant, le "Routeur" est le serveur, il vérifie une première fois que le client a choisit un plat qui est sur le menu.
-Le "Controller" est le cuisinier que reçoit la commande, il revérifie que la recette est bien dans le menu.
-Si c'est le cas, il va chercher dans son livre qui est en réalité le "Model" la recette correspondant au plat B18 dans le menu et la récupère.
-Enfin il exécute le plat qui correspond au "View", pour le renvoyer vers le client.
+Pour faire une analogie avec un restaurant, le "*Routeur*" est le serveur, il vérifie une première fois que le client a choisit un plat qui est sur le menu.
+Le "*Controller*" est le cuisinier que reçoit la commande, il revérifie que la recette est bien dans le menu.
+Si c'est le cas, il va chercher dans son livre qui est en réalité le "*Model*" la recette correspondant au plat B18 dans le menu et la récupère.
+Enfin il exécute le plat qui correspond au "*View*", pour le renvoyer vers le client.
 </br>
 </br>
 
@@ -86,18 +86,12 @@ En deuxième colonne on a son nom, puis on pourrait avoir une colonne chaud/froi
 
 ## <a name="get_post">GET/POST</a>
 
+**GET** et **POST** sont deux méthodes de requête-réponse entre le client et le server dans le protocole *HTTP*.
 
-REST est basé sur le protocole HTTP, qui est un standard. REST est un pattern, un template pour construire des api en suivant les conventions classiques.
+**GET**: permet de lire des données contenu dans la base de données.
+**POST**: permet permet d'y écrire des donnée à la demande de l'utilisateur.
 
-Aujourd’hui, il y a différentes actions possibles, mais les 4 les plus utilisées sont les suivantes :
-* GET : qui fait comme un "return" de la ressource suivant le path demandé. elle va la chercher et en fait ce que tu lui demandes de faire
-* POST : crée une nouvelle ressource
-* PUT : met à jour une ressource existante
-* DELETE : supprimer une ressource existante
-
-Par ressource, on entendra dans notre cas par exemple la base de données qui est derrière le "Model".
-
-Notre objectif est pas de créer ces actions, mais plutôt de nous baser sur quelques actions qui sont déjà définis. GET, POST, PUT, DELETE, répondent aux principes de CRUD (Create, Read, Update, Delete) que l’on veut appliquer avec Rails
+*HTTP*(Hypertext Transfer Protocol) à été crée pour permettre la communication entre un client et le serveur. Un navigateur peut être le client et une application sur un ordinateur qui héberge un site web, le server.
 </br>
 </br>
 
@@ -112,3 +106,22 @@ Lorsque l'on les cré, dans leur nom il y a l'heure à laquelle on effectué cet
 Encore une fois si on travaille à plusieurs et qu'un autre développeur effectue une migration, on saura alors dans quel ordre il faut les exécuter.
 </br>
 </br>
+
+
+## <a name:"relations_models_bdd">Les relations entre Models et BDD</a>
+
+</br>
+</br>
+
+
+## <a name:"crud">Les fonctions du CRUD</a>
+
+Aujourd’hui, il y a différentes actions possibles, mais les 4 les plus utilisées sont les suivantes :
+* **GET** : qui fait comme un "return" de la ressource suivant le path demandé. elle va la chercher et en fait ce que tu lui demandes de faire
+* **POST** : crée une nouvelle ressource
+* **PUT** : met à jour une ressource existante
+* **DELETE** : supprimer une ressource existante
+
+Par ressource, on entendra dans notre cas par exemple la base de données qui est derrière le "Model".
+
+Notre objectif est pas de créer ces actions, mais plutôt de nous baser sur quelques actions qui sont déjà définis. GET, POST, PUT, DELETE, répondent aux principes de **CRUD** (Create, Read, Update, Delete) que l’on veut appliquer avec Rails
