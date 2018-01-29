@@ -1,18 +1,18 @@
 # NOTES BASES RAILS
 Dans ce README nous allons voir les principes de base pour ruby on RAILS.
 
-### Sommaire
+## Sommaire
 * [Sites Statiques / Sites Dynamiques](#stat_dyn)
 * [MVC](#mvc)
 * [Les routes](#routes)
 * [Les Bases de Données](#bases_de_données)
-* [GET / POST](#getPost)
-* [Le concept de migration](#migration)
+* [GET / POST](#get_post)
+* [Le concept de migration](#migrations)
 * [Les relations entre les models des BDD](#relations_bdd)
 * [Les fonctions du CRUD](#crud)
 
 
-### <a name="stat_dyn">Sites Statiques / Sites Dynamiques</a>
+## <a name="stat_dyn">Sites Statiques / Sites Dynamiques</a>
 
 Un site statique, est composé de pages dites statiques, visibles telles qu’elles ont été conçues. Cela ne signifie pas qu’elles sont sans mouvement ou sans animation. La ou les pages accessibles ne seront donc pas différentes en fonction de l'utilisateur qui les consultes ou différentes pour un même utilisateur en fonction d'une visite à l'autre.
 
@@ -22,7 +22,7 @@ Au contraire, dans un site dynamique les informations seront présentées de fa�
 
 
 
-### <a name="mvc">MVC (Model View Controller)</a>
+## <a name="mvc">MVC (Model View Controller)</a>
 
 
 Le Router vérifie une première fois quelle est la route et si elle est bonne.
@@ -39,7 +39,7 @@ Il vérifie que la commande envoyé par l'utilisateur est valide (notamment la r
 Le Model, reçoit les requête du Controller et va chercher la correspondance dans la base de donnée et la renvoie au Controller.
 
 
-#### Analogie restaurant
+### Analogie restaurant
 
 Pour faire une analogie avec un restaurant, le "Routeur" est le serveur, il vérifie une première fois que le client a choisit un plat qui est sur le menu.
 Le "Controller" est le cuisinier que reçoit la commande, il revérifie que la recette est bien dans le menu.
@@ -50,7 +50,7 @@ Enfin il exécute le plat qui correspond au "View", pour le renvoyer vers le cli
 
 
 
-### <a name="routes">Les Routes</a>
+## <a name="routes">Les Routes</a>
 
 Les routes c'est exactement comme son nom l'indique, le chemin qui mène jusqu'à l'action que l'on veut exécuter.
 C'est dans un URL, le fait qu'on va lui demander, dans le site de Facebook, c'est ce qui va dire que l'on va dans la rubrique de "Groupe", puis le nom du groupe...
@@ -62,13 +62,13 @@ Dans une application, ce serait demander d'ouvrir le dossier compte de tel utili
 
 
 
-### <a name="bases_de_données">Les Bases de Données</a>
+## <a name="bases_de_données">Les Bases de Données</a>
 
 C'est comme un énorme tableau "Excel" dans lequel il y a des plusieurs tables.
 La première colonne est "l'id" qui va permettre par exemple d'identifier un utilisateur, ou dans l'exemple de Félix, un article. La deuxième est généralement le nom ou le titre et les colonnes qui suivent les données qu'ils contiennent.
 
 
-#### Analogie Restaurant
+### Analogie Restaurant
 
 Pour reprendre notre analogie sur le restaurant, la base de donnée c'est le livre de recette.
 On a tout d'abord le numéro de la recette qui correspond à celui qui est reporté sur le menu.
@@ -80,7 +80,7 @@ En deuxième colonne on a son nom, puis on pourrait avoir une colonne chaud/froi
 
 
 
-GET/POST
+## <a name="get_post">GET/POST</a>
 
 
 REST est basé sur le protocole HTTP, qui est un standard. REST est un pattern, un template pour construire des api en suivant les conventions classiques.
@@ -101,7 +101,7 @@ Notre objectif est pas de créer ces actions, mais plutôt de nous baser sur que
 
 
 
-Les Migration
+## <a name="migrations>Les Migration</a>
 
 Une migration va permettre de définir les mutations, les modification à faire au niveau de la base de données.
 Ce qui est intéressant c'est qu'en travaillant à plusieurs, ça permet de n'avoir à récupérer que les migration pour que le projet se mette à jour, plutôt que d'avoir à modifier la base de donnée directement dans le "dur".
