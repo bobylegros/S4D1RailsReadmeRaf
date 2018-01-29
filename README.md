@@ -119,7 +119,7 @@ Ou encore il est possible d'en lier un à plusieurs autres.
 Ou plusieurs ensemble.
 
 
-Les **Models** sont des classes de Ruby. Mais encore faut-il les associer. 
+Les **Models** sont des classes de Ruby. Mais encore faut-il les associer.
 </br>
 </br>
 
@@ -136,3 +136,9 @@ Aujourd’hui, il y a différentes actions possibles, mais les 4 fonctions les p
 * **DELETE** : supprimer une ressource existante
 
 Par ressource, on entendra dans notre cas par exemple la base de données qui est derrière le "*Model*".
+</br>
+</br>
+</br>
+</br>
+
+**Et voili voilou pour ce petit résumé!***
